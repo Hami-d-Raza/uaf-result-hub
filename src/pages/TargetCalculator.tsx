@@ -419,11 +419,11 @@ export default function TargetCalculator() {
 
               {/* Student pill */}
               <div className="flex items-center justify-between rounded-xl border bg-muted/30 px-4 py-3">
-                <div className="flex items-center gap-3">
-                  <User className="h-4 w-4 text-muted-foreground" />
-                  <div>
-                    <p className="text-sm font-semibold text-foreground leading-none">{student.name}</p>
-                    <p className="text-[11px] text-muted-foreground mt-0.5">Current CGPA: {cCGPA.toFixed(2)} · {cCredits} credits</p>
+                <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <User className="h-4 w-4 text-muted-foreground shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-foreground leading-none truncate">{student.name}</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5 truncate">Current CGPA: {cCGPA.toFixed(2)} · {cCredits} credits</p>
                   </div>
                 </div>
                 <Button variant="ghost" size="sm" onClick={handleReset} className="text-xs gap-1">
@@ -533,7 +533,7 @@ export default function TargetCalculator() {
                 <CardContent className="space-y-3 pb-5">
                   {scenarios.map((s, i) => (
                     <motion.div key={s.label} initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.07 }}
-                      className={cn("flex items-center justify-between rounded-xl border p-4",
+                      className={cn("flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 rounded-xl border p-4",
                         s.feasible ? "bg-card hover:bg-muted/30" : "bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800"
                       )}>
                       <div>

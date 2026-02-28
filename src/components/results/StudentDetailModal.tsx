@@ -16,7 +16,7 @@ export function StudentDetailModal({ isOpen, onClose, student }: StudentDetailMo
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent className="max-w-7xl h-[90vh] p-0 flex flex-col gap-0 bg-background/95 backdrop-blur-sm">
-                <DialogHeader className="p-6 pb-2 border-b shrink-0">
+                <DialogHeader className="p-4 pb-2 sm:p-6 sm:pb-2 border-b shrink-0">
                     <div className="flex items-center justify-between">
                         <DialogTitle className="text-2xl font-bold flex items-center gap-2">
                             <span className="text-primary">Student Details</span>
@@ -27,7 +27,7 @@ export function StudentDetailModal({ isOpen, onClose, student }: StudentDetailMo
                     </div>
                 </DialogHeader>
 
-                <ScrollArea className="flex-1 p-6">
+                <ScrollArea className="flex-1 p-4 sm:p-6">
                     <div className="space-y-8 pb-10">
                         {/* Reusing the Overview Component */}
                         <StudentOverview student={student} />
