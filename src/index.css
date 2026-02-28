@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UAF Result System Design System */
+
+@layer base {
+  :root {
+    /* Light Mode — Pale Lavender + Amber */
+    --background: 264 100% 98%;       /* #F9F5FF — Very Pale Lavender */
+    --foreground: 261 73% 23%;        /* #2E1065 — Deep Midnight Purple */
+
+    --card: 0 0% 100%;                /* #FFFFFF — Pure White */
+    --card-foreground: 261 73% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 261 73% 23%;
+
+    --primary: 32 95% 44%;            /* #D97706 — Rich Amber */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 264 60% 93%;         /* Soft lavender tint */
+    --secondary-foreground: 261 73% 23%;
+
+    --muted: 264 50% 93%;
+    --muted-foreground: 261 30% 45%;
+
+    --accent: 32 95% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 264 30% 88%;
+    --input: 264 30% 88%;
+    --ring: 32 95% 44%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(32, 95%, 44%) 0%, hsl(38, 92%, 54%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(264, 100%, 98%) 0%, hsl(264, 60%, 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(264, 50%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(261 73% 23% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(261 73% 23% / 0.08), 0 2px 4px -2px hsl(261 73% 23% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(261 73% 23% / 0.1), 0 4px 6px -4px hsl(261 73% 23% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(261 73% 23% / 0.1), 0 8px 10px -6px hsl(261 73% 23% / 0.05);
+    --shadow-glow: 0 0 20px hsl(32, 95%, 44%, 0.2);
+
+    --sidebar-background: 264 100% 98%;
+    --sidebar-foreground: 261 73% 23%;
+    --sidebar-primary: 32 95% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 264 60% 93%;
+    --sidebar-accent-foreground: 261 73% 23%;
+    --sidebar-border: 264 30% 88%;
+    --sidebar-ring: 32 95% 44%;
+  }
+
+  .dark {
+    /* Dark Mode — Deep Purple + Amber */
+    --background: 269 40% 10%;        /* #1A1025 — Very Dark Purple */
+    --foreground: 269 100% 95%;       /* #F3E8FF — Very Pale Purple-White */
+
+    --card: 268 42% 18%;              /* #2D1B42 — Muted Violet */
+    --card-foreground: 269 100% 95%;
+
+    --popover: 268 42% 18%;
+    --popover-foreground: 269 100% 95%;
+
+    --primary: 38 92% 50%;            /* #F59E0B — Bright Amber/Gold */
+    --primary-foreground: 269 40% 10%;
+
+    --secondary: 268 32% 26%;
+    --secondary-foreground: 269 80% 90%;
+
+    --muted: 268 28% 22%;
+    --muted-foreground: 269 40% 65%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 269 40% 10%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 268 28% 28%;
+    --input: 268 28% 28%;
+    --ring: 38 92% 50%;
+
+    --success: 142 65% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 269 40% 10%;
+    --info: 199 80% 55%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(38, 92%, 45%) 0%, hsl(38, 92%, 58%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(269, 40%, 10%) 0%, hsl(268, 42%, 14%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(268, 42%, 18%) 0%, hsl(268, 35%, 22%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(269 40% 5% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(269 40% 5% / 0.4), 0 2px 4px -2px hsl(269 40% 5% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(269 40% 5% / 0.5), 0 4px 6px -4px hsl(269 40% 5% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(269 40% 5% / 0.5), 0 8px 10px -6px hsl(269 40% 5% / 0.2);
+    --shadow-glow: 0 0 20px hsl(38, 92%, 50%, 0.25);
+
+    --sidebar-background: 269 40% 10%;
+    --sidebar-foreground: 269 100% 95%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 269 40% 10%;
+    --sidebar-accent: 268 32% 26%;
+    --sidebar-accent-foreground: 269 100% 95%;
+    --sidebar-border: 268 28% 28%;
+    --sidebar-ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .card-elevated {
+    box-shadow: var(--shadow-md);
+    background: var(--gradient-card);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Hide scrollbar for everybody always */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
