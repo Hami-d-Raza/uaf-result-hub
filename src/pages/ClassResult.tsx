@@ -11,6 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { ClassResultTableSkeleton, ClassResultRowSkeleton } from "@/components/ui/LoadingSkeleton";
+import SEO from "@/components/SEO";
 import {
   Select,
   SelectContent,
@@ -223,6 +224,11 @@ export default function ClassResult() {
       fullWidth={results.length > 0}
       className={results.length > 0 ? "px-2 md:px-4" : ""}
     >
+      <SEO 
+        title="Class Results" 
+        description="Check and compare full class result using a range of AG numbers at UAF Result Hub."
+        url="/class"
+      />
       <div className={cn(
         "flex flex-col items-center justify-center gap-6 transition-all duration-500",
         results.length > 0 ? "min-h-0 py-8 p-0" : "min-h-[85vh] p-4 md:p-8"

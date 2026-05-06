@@ -18,6 +18,7 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import { StatCard } from "@/components/ui/StatCard";
 import { gradingScale, gradeColors } from "@/config/semesterMap";
 
@@ -73,6 +74,11 @@ const highlights = [
 export default function Dashboard() {
   return (
     <Layout>
+      <SEO 
+        title="Home" 
+        description="Calculate your GPA and CGPA instantly using the UAF Result Hub platform."
+        url="/"
+      />
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <motion.section

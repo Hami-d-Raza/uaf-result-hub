@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Dashboard from "./pages/Dashboard";
 import IndividualResult from "./pages/IndividualResult";
 import ClassResult from "./pages/ClassResult";
@@ -20,30 +21,32 @@ import { SystemStatusNotice } from "@/components/SystemStatusNotice";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <Analytics />
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-          <SystemStatusNotice />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/individual" element={<IndividualResult />} />
-            <Route path="/class" element={<ClassResult />} />
-            <Route path="/smart-search" element={<SmartSearch />} />
-            <Route path="/target-calculator" element={<TargetCalculator />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <Analytics />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+            <SystemStatusNotice />
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/individual" element={<IndividualResult />} />
+              <Route path="/class" element={<ClassResult />} />
+              <Route path="/smart-search" element={<SmartSearch />} />
+              <Route path="/target-calculator" element={<TargetCalculator />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

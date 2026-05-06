@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import SEO from "@/components/SEO";
 
 export default function Contact() {
     const { toast } = useToast();
@@ -56,6 +57,7 @@ export default function Contact() {
 
     return (
         <Layout>
+            <SEO title="Contact Us" description="Reach out to the UAF Result Hub team with feedback, suggestions, or queries." url="/contact" />
             <div className="flex flex-col items-center justify-center min-h-[85vh] p-4">
                 <div className="w-full max-w-lg mx-auto">
                     <motion.div

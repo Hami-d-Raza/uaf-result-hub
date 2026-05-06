@@ -2,10 +2,12 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Globe, Shield, BookOpen, Lock, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 
 export default function PrivacyPolicy() {
     return (
         <Layout>
+            <SEO title="Privacy Policy" description="Read the privacy policy to understand how UAF Result Hub protects your data." url="/privacy-policy" />
             <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
                 <div className="text-center mb-12 animate-fadeInUp">
                     <h1 className="text-4xl font-bold text-foreground mb-4">Privacy Policy</h1>

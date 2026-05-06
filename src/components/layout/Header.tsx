@@ -32,8 +32,8 @@ export function Header() {
               <GraduationCap className="h-6 w-6 text-primary-foreground" />
             </motion.div>
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground">UAF Results</h1>
-              <p className="text-xs text-muted-foreground">GPA Management System</p>
+              <span className="block text-lg font-bold text-foreground">UAF Result Hub</span>
+              <span className="block text-xs text-muted-foreground">GPA Management System</span>
             </div>
           </Link>
 

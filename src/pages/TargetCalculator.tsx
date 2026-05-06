@@ -23,6 +23,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { formatAGNumber } from "@/lib/gpaCalculator";
 import { uafScraper } from "@/lib/uaf-scraper";
 import type { StudentResult } from "@/types/result";
+import SEO from "@/components/SEO";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -218,6 +219,11 @@ export default function TargetCalculator() {
   //  Render 
   return (
     <Layout>
+      <SEO 
+        title="Target CGPA Calculator" 
+        description="Calculate the GPA you need to hit your target CGPA before graduation."
+        url="/target-calculator"
+      />
       <div className="max-w-2xl mx-auto px-2 md:px-8 py-8">
 
         {/* Header */}

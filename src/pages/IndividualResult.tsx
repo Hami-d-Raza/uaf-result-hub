@@ -16,6 +16,7 @@ import type { StudentResult, SemesterResult, Subject } from "@/types/result";
 import { cn } from "@/lib/utils";
 import { generatePDFReport } from "@/lib/pdfGenerator";
 import { IndividualResultSkeleton } from "@/components/ui/LoadingSkeleton";
+import SEO from "@/components/SEO";
 
 
 
@@ -156,6 +157,11 @@ export default function IndividualResult() {
 
   return (
     <Layout>
+      <SEO 
+        title="Individual Result" 
+        description="Search your Ag number to check your UAF individual semester results, GPA, and CGPA details."
+        url="/individual"
+      />
       <div className={cn(
         "flex flex-col items-center justify-center transition-all duration-500",
         result ? "min-h-0 px-2 md:px-8 pb-8 pt-0" : "min-h-[85vh] p-2 md:p-8"

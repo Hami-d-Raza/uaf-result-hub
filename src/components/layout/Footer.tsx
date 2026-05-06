@@ -84,10 +84,10 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold text-white mb-4">Connect</h3>
                         <div className="flex gap-4 mb-4">
-                            <a href="https://github.com/Hami-d-Raza" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[hsl(269,50%,8%)] transition-colors border border-white/20">
+                            <a href="https://github.com/Hami-d-Raza" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[hsl(269,50%,8%)] transition-colors border border-white/20">
                                 <Github className="h-4 w-4" />
                             </a>
-                            <a href="https://www.linkedin.com/in/muhammad-hamid-raza-/" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[hsl(269,50%,8%)] transition-colors border border-white/20">
+                            <a href="https://www.linkedin.com/in/muhammad-hamid-raza-/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-[hsl(269,50%,8%)] transition-colors border border-white/20">
                                 <Linkedin className="h-4 w-4" />
                             </a>
                         </div>

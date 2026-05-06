@@ -17,6 +17,7 @@ import { uafScraper } from "@/lib/uaf-scraper";
 import { CourseDetailModal } from "@/components/results/CourseDetailModal";
 import { AGReviewDialog } from "@/components/results/AGReviewDialog";
 import { SearchResultCardSkeleton, SmartSearchRowSkeleton } from "@/components/ui/LoadingSkeleton";
+import SEO from "@/components/SEO";
 import * as XLSX from 'xlsx';
 import { cn } from "@/lib/utils";
 
@@ -250,6 +251,11 @@ export default function SmartSearch() {
 
     return (
         <Layout>
+            <SEO 
+                title="Smart Search" 
+                description="Search for courses and grades across a range of AG numbers at UAF Result Hub."
+                url="/smart-search"
+            />
             <div className={cn(
                 "flex flex-col items-center justify-center p-2 lg:p-4 overflow-hidden transition-all duration-500 ease-in-out",
                 hasSearched ? "h-[calc(100vh-theme(spacing.2))] lg:h-[calc(100vh-theme(spacing.20))]" : "min-h-[85vh]"
